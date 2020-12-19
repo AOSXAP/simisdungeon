@@ -1,1 +1,1 @@
-## File made to reset database(delete all collections)
+##  Made to reset database(delete all collections)
