@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.12/dist/css/uikit.min.css" />
+    
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.12/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.12/dist/js/uikit-icons.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav style="background-color: blueviolet;" class="uk-navbar-container uk-margin" uk-navbar="mode: click">
+        <div class="uk-navbar-left">
+    
+            <ul class="uk-navbar-nav">
+                <li><a style="color:white" href="/all-posts">All posts</a></li>
+                <li class="uk-active"><a style="color:white" href="/">Home</a></li>
+                <li><a style="color:white" href="/all">Posts</a></li>
+                <li><a style="color:white" href="https://simichat.netlify.app/">Chat</a></li>
+            </ul>
+    
+        </div>
+    </nav>
+        <% result.forEach(function(resx) { %>
+        <article style="padding: 30px;" class="uk-article">
+        
+            <h1 class="uk-article-title"><a class="uk-link-reset" href=""><%= resx.title%></a></h1>
+        
+            <p class="uk-article-meta">Written by <a href="#"><%= resx.author%></a>, <%= resx.date%>. Posted in <a
+                    href="/">Simi's Dungeon</a></p>
+        
+            <p class="uk-text-lead"><%= resx.body.substring(0, 100) %> ...</p>
+
+                    <div class="uk-grid-small uk-child-width-auto" uk-grid>
+                        <div>
+                            <a class="uk-button uk-button-text" href="/article/<%=resx.id%>">Read more</a>
+                        </div>
+                    </div>
+        
+        
+        </article>
+        <% }); %>
+</body>
+</html>

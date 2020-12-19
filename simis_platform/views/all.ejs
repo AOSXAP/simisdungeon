@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="./images/logo.jpg" />
+    <title>All posts</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.13/dist/css/uikit.min.css" />
+    
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.13/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.13/dist/js/uikit-icons.min.js"></script>
+
+        <!-- BOOTSTRAP -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>  
+            <nav style="background-color: blueviolet;" class="navbar navbar-expand-lg navbar-dark ">
+                <a class="navbar-brand" href="#">Simi's Dungeon</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/">Home </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/all">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://simichat.netlify.app/">Chat</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+    <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
+        data-src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cHVycGxlfGVufDB8fDB8&auto=format&fit=crop&w=5000&q=60" uk-img>
+        <h1 style="transform: translateX(20px);">Posts</h1>
+    </div>
+
+
+
+    <div style="padding: 30px;" class="uk-column-1-2 uk-column-divider">
+        <p>“We waste time looking for the perfect lover, instead of creating the perfect love.”
+        ― Tom Robbins.</p>
+    
+        <p>“The main reason Santa is so jolly is because he knows where all the bad girls live.”
+        ― George Carlin</p>
+    
+        <blockquote cite="#" class="uk-column-span">
+            <p>All we have to decide is what to do with the time that is given us.</p>
+            <footer>Gandalf in in <cite><a href="">The Fellowship of the Ring</a></cite></footer>
+        </blockquote>
+    
+        <p>“Anyone who is observant, who discovers the person they have always dreamed of, knows that sexual energy comes into play
+        before sex even takes place. The greatest pleasure isn't sex, but the passion with which it is practiced. When the
+        passion is intense, then sex joins in to complete the dance, but it is never the principal aim.”
+        ― Paulo Coelho
+        </p>
+    </div>
+
+
+    <div class="uk-child-width-1-1@s uk-grid-collapse uk-text-center" uk-grid>
+        <div>
+            <div class="uk-tile uk-tile-default">
+                <p class="uk-h2">EXPLORE</p>
+                <hr
+                style="border: 0.1px solid blueviolet; width: 50px; position: relative; left: 50%; transform: translateX(-50%);">
+        </div>
+    </div>
+    </div>
+
+    <% for(var i=0;i<3;i++){ %>
+    <article style="padding: 30px;margin-bottom: 50px;" class="uk-article">
+    
+        <h1 class="uk-article-title wh"><a class="uk-link-reset" href=""><%= result[i].title%></a></h1>
+    
+        <p class="uk-article-meta">Written by <a href="#"><%= result[i].author%></a>, <%= result[i].date%>. Posted in <a
+                href="#">Simi's Dungeon</a></p>
+    
+        <p class="uk-text-lead whp"><%= result[i].body.substring(0,50) %> ...</p>
+    
+        <div class="uk-grid-small uk-child-width-auto" uk-grid>
+            <div>
+                <a class="uk-button uk-button-text" href="/article/<%=result[i].id%>">Read more</a>
+            </div>
+        </div>
+    
+    </article>
+    <% }; %>
+
+
+    <div class="uk-child-width-1-1@s uk-grid-collapse uk-text-center" uk-grid>
+        <div>
+            <div class="uk-tile uk-tile-default">
+               <a style="color: blueviolet;" href="/all-posts"><p class="uk">See all the posts</p></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

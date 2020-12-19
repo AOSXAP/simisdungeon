@@ -1,0 +1,27 @@
+{
+  "name": "simis_dungeon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon App.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "mongoose": "^5.11.5",
+    "nodemon": "^2.0.6",
+    "socket.io": "^3.0.4",
+    "validator": "^13.5.1"
+  },
+  "engines": {
+    "node": "14.14.0"
+  }
+}

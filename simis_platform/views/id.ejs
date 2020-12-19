@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.12/dist/css/uikit.min.css" />
+    
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.12/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.12/dist/js/uikit-icons.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FONTAWSOME -->
+    <script src="https://kit.fontawesome.com/7a34b12c15.js" crossorigin="anonymous"></script>
+
+    <title>Article</title>
+</head>
+<body>
+    <nav style="background-color: blueviolet;" class="uk-navbar-container uk-margin" uk-navbar="mode: click">
+        <div class="uk-navbar-left">
+    
+            <ul class="uk-navbar-nav">
+                <li><a style="color:white" href="/all-posts">All posts</a></li>
+                <li class="uk-active"><a style="color:white" href="/">Home</a></li>
+                <li ><a style="color:white" href="/all">Posts</a></li>
+                <li><a style="color:white" href="https://simichat.netlify.app/">Chat</a></li>
+            </ul>
+    
+        </div>
+    </nav>
+
+        
+
+    <article style="padding: 30px;margin-bottom: 50px;" class="uk-article">
+    
+        <h1 style="font-size: 35px;" class="uk-article-title"><a class="uk-link-reset" href=""><%=result.title%></a>
+        </h1>
+    
+        <p class="uk-article-meta">Written by <a href="#"><%= result.author%></a> <%= result.date%>. Posted in <a
+                href="#">Simi's Dungeon</a></p>
+    
+        <p class="uk-text-lead"><%= result.body %> </p>
+    
+    </article>
+</body>
+</html>
